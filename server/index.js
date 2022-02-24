@@ -16,7 +16,7 @@ app.use(cors());
 app.use('/posts', postRoutes); 
 app.use("/user", userRouter);
 
-const CONNECTION_URL = 'mongodb+srv://binod:binodpoudel@cluster0.4xze8.mongodb.net/mernstack?retryWrites=true&w=majority';
+const CONNECTION_URL = 'mongodb+srv://Your UserName:Password@cluster0.4xze8.mongodb.net/mernstack?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })

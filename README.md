@@ -9,7 +9,8 @@
 
 4.In this Travel Memories app. I have a strong understanding of MERN-Stack workflow.
 
-5.How to run this application, if anyone want to run this application clone from github repository or download zip file after that go to both client and server file do  npm i or npm install and run npm start....... 
+5.How to run this application, if anyone want to run this application clone from github repository or download zip file after that go to both client and server file do  npm i or npm install and inside server folder index.js write you MongoDB database user name and password after that run npm start....... 
 
 6.If you need any kind help to run this MERN app, you can contact me via email:- footandshadows@gmail.com. What I know, I will try to help you.
+
 
