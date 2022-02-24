@@ -14,5 +14,4 @@
 6.If you need any kind help to run this MERN app, you can contact me via email:- footandshadows@gmail.com. What I know, I will try to help you.
 
 
-![](images/Screenshot.png)
-<img src="images/Screenshot.png" width="100">
+
