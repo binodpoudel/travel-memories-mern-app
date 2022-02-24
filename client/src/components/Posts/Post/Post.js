@@ -4,7 +4,6 @@ import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import DeleteIcon from '@material-ui/icons/Delete';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
-//import InfoIcon from '@material-ui/icons/Info';
 import { useDispatch } from 'react-redux';
 import moment from 'moment';
 import { useHistory } from 'react-router-dom';
@@ -21,7 +20,7 @@ const Post = ({ post, setCurrentId }) => {
 
   const [ likes, setLikes ] = useState(post?.likes); //I am  here taking the same value of post(post?.likes) and  [ likes, setLikes] post already created above and  use it here. Also, use the below where like counts because this i get immidetlly likes  can see..... 
   
-  const userId = user?.result?.googleId || user?.result?._id; // this mean google userId or normal database userId 
+  const userId = user?.result?.googleId || user?.result?._id; // this mean google userId or normal userId from database 
 
   const hasLikePost = post?.likes?.find((like) => like === userId); //// This code means if the user currently likes the post or not. 
 
@@ -33,16 +32,16 @@ const Post = ({ post, setCurrentId }) => {
     } else {
       setLikes([ ...post.likes, userId])
     }
-  }; /// this we use below where is like button and now we get immedetly when we like in like button
+  }; /// this we use below where is like button and now we get immedetly when we like in like button  
 
   const Likes = () => {
     // here  post likes lengths
-    if (post?.likes?.length > 0) {
-      return post.likes.find((like) => like === (user?.result?.googleId || user?.result?._id))
+    if (likes.length > 0) {
+      return likes.find((like) => like === userId)
         ? (
-          <><ThumbUpAltIcon fontSize="small" />&nbsp;{post.likes.length > 2 ? `You and ${post.likes.length - 1} others` : `${post.likes.length} like${post.likes.length > 1 ? 's' : ''}` }</>
+          <><ThumbUpAltIcon fontSize="small" />&nbsp;{likes.length > 2 ? `You and ${likes.length - 1} others` : `${likes.length} like${likes.length > 1 ? 's' : ''}` }</>
         ) : (
-          <><ThumbUpAltOutlined fontSize="small" />&nbsp;{post.likes.length} {post.likes.length === 1 ? 'Like' : 'Likes'}</>
+          <><ThumbUpAltOutlined fontSize="small" />&nbsp;{likes.length} {likes.length === 1 ? 'Like' : 'Likes'}</>
         );
     }
 

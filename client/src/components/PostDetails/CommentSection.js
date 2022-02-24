@@ -22,12 +22,12 @@ const CommentSection = ({ post }) => {
   //console.log(user);
   const handleClick = async () => {
       const finalComment = `${user.result.name}: ${comment}`;
-      const  newComments = await dispatch(commentPost(finalComment, post._id)); 
+      const  newComments = await dispatch(commentPost(finalComment, post._id)); /// here dispatch action
       
        setComments(newComments); 
        setComment('');
 
-      commentsRef.current.scrollIntoView({ behavior: 'smooth' });  
+      commentsRef.current.scrollIntoView({ behavior: 'smooth' });  // scroll down comments
   }; 
 
   return (

@@ -92,7 +92,7 @@ export const likePost = (id) => async (dispatch) => {
 export const commentPost = (value, id) => async (dispatch) => {
   
   try {
-    const  { data }  = await api.comment(value, id);
+    const  { data }  = await api.comment(value, id); /// here action creater api called
     console.log(data)
     dispatch({ type: COMMENT, payload: data }); //This code deals with redux thunk and send our comment commentSections.js  and fetch all.
     return data.comments;  // return new comment
