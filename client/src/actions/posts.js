@@ -46,7 +46,7 @@ export const getPostsBySearch = (searchQuery) => async (dispatch) => {
   }
 };
 
-/* Below code logic for  create new post.*/
+/* Below logic for create new post.*/
 export const createPost = (post, history) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
@@ -60,7 +60,7 @@ export const createPost = (post, history) => async (dispatch) => {
   }
 };
 
-/* Below code logic for updatePost.*/
+/* Below logic for updatePost.*/
 
 export const updatePost = (id, post) => async (dispatch) => {
   try {
@@ -72,7 +72,7 @@ export const updatePost = (id, post) => async (dispatch) => {
   }
 };
 
-/* Below code logic for likePost.*/
+/* Below logic for likePost.*/
 /* Like Post, we don't need to use dispatch start_loading. That is why I am not using it here.*/
 
 export const likePost = (id) => async (dispatch) => {
@@ -87,7 +87,7 @@ export const likePost = (id) => async (dispatch) => {
   }
 };
 
-/* Below code  logic for commentPost.*/
+/* Below logic for commentPost.*/
 /* Below code value means finalComment and  id, means post._id ( we are passing in the commentSection file inside handleClick dispatch).*/
 export const commentPost = (value, id) => async (dispatch) => {
   
@@ -101,7 +101,7 @@ export const commentPost = (value, id) => async (dispatch) => {
   }
 };
 
-/* Below code logic for deletePost.*/
+/* Below logic for deletePost.*/
 
 export const deletePost = (id) => async (dispatch) => {
   try {

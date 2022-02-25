@@ -17,7 +17,7 @@ const Navbar = () => {
   const location = useLocation();
   const history = useHistory();
   const classes = useStyles();
-  const url="https://github.com/binodpoudel";
+  const url="https://github.com/binodpoudel/travel-memories-mern-app";
 
   const logout = () => {
     dispatch({ type: actionType.LOGOUT });

@@ -18,4 +18,4 @@ router.post('/:id/commentPost', auth, commentPost);
 
 export default router;
 
-/*this here  code functions of backend and handele all likePost , commentPost .........*/
+/*This here code functions of backend and handele all likePost , commentPost .........*/

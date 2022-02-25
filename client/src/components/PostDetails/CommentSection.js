@@ -21,9 +21,13 @@ const CommentSection = ({ post }) => {
   
   //console.log(user);
   const handleClick = async () => {
+
       const finalComment = `${user.result.name}: ${comment}`;
+
       const  newComments = await dispatch(commentPost(finalComment, post._id)); /* here dispatch action*/
       
+      /* or const newComments = await dispatch(commentPost(`${user?.result?.name}: ${comment}`, post._id));  */
+
        setComments(newComments); 
        setComment('');
 
@@ -37,12 +41,12 @@ const CommentSection = ({ post }) => {
           <Typography gutterBottom variant="h6">Comments</Typography> 
           {comments?.map((c, i) => (
             <Typography key={i} gutterBottom variant="subtitle1">
-              <strong>{c?.split(': ')[0]}</strong> 
+              <strong>{c.split(': ')[0]}</strong> 
               {c.split(':')[1]} 
                 
             </Typography>
           ))} 
-          <div ref={commentsRef} /> 
+          <div ref={commentsRef} />{/* use here when we add comments scroll automatically */}
         </div> 
         
         {user?.result?.name && (  
