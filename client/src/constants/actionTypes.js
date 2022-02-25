@@ -1,5 +1,5 @@
 
-// Why I use constants is because if we miss a typing  or typo error we easily find. That why I created  this file.
+/* Why I use constants is because if we miss a typing  or typo error we easily find. That why I created  this file.*/
 export const CREATE = 'CREATE';
 export const UPDATE = 'UPDATE';
 export const DELETE = 'DELETE';

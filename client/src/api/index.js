@@ -1,4 +1,4 @@
-// API connection between frontend and backend.
+/* API connection here.*/
 
 import axios from 'axios';
 

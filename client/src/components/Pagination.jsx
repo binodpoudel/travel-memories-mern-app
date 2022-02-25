@@ -23,7 +23,7 @@ const Paginate = ({ page }) => {
     <Pagination
       classes={{ ul: classes.ul }}
       count={numberOfPages}
-      page={Number(page) || 1} // numbers of page or first page
+      page={Number(page) || 1} /*numbers of page or first page*/
       variant="outlined"
       color="primary"
       renderItem={(item) => (
@@ -35,4 +35,4 @@ const Paginate = ({ page }) => {
 
 export default Paginate;
 
-// This file we export and import to Home.js 
+/* This file we export and import to Home.js */

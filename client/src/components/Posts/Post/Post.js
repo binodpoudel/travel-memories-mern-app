@@ -11,31 +11,31 @@ import { useHistory } from 'react-router-dom';
 import {  likePost, deletePost } from '../../../actions/posts';
 import useStyles from './styles';
 
-/// The code below I passed ({ post }) through props
+/*The code below I passed ({ post }) through props*/
 const Post = ({ post, setCurrentId }) => {
   const dispatch = useDispatch();
   const classes = useStyles();
-  const user = JSON.parse(localStorage.getItem('profile')); // this mean user
+  const user = JSON.parse(localStorage.getItem('profile')); /* this mean user*/
   const history = useHistory();
 
-  const [ likes, setLikes ] = useState(post?.likes); //I am  here taking the same value of post(post?.likes) and  [ likes, setLikes] post already created above and  use it here. Also, use the below where like counts because this i get immidetlly likes  can see..... 
+  const [ likes, setLikes ] = useState(post?.likes); /*I am  here taking the same value of post(post?.likes) and  [ likes, setLikes] post already created above and  use it here. Also, use the below where like counts because this i get immidetlly likes  can see..... */
   
-  const userId = user?.result?.googleId || user?.result?._id; // this mean google userId or normal userId from database 
+  const userId = user?.result?.googleId || user?.result?._id; /*this mean google userId or normal userId from database*/ 
 
-  const hasLikePost = post?.likes?.find((like) => like === userId); //// This code means if the user currently likes the post or not. 
+  const hasLikePost = post?.likes?.find((like) => like === userId); /*This code means if the user currently likes the post or not.*/
 
   const handleLike = async () => {
-    dispatch(likePost(post._id)); //// this code we use below for like for posts
+    dispatch(likePost(post._id)); /*this code we use below for like for posts*/
     
     if(hasLikePost) {
-      setLikes(post.likes.filter((id) => id !== userId)); ////// this  code mean  user  likes the post or unlike it and filter out their likes.
+      setLikes(post.likes.filter((id) => id !== userId)); /*this  code mean  user  likes the post or unlike it and filter out their likes.*/
     } else {
       setLikes([ ...post.likes, userId])
     }
-  }; /// this we use below where is like button and now we get immedetly when we like in like button  
+  }; /* this we use below where is like button and now we get immedetly when we like in like button.*/ 
 
   const Likes = () => {
-    // here  post likes lengths
+    /* here  post likes lengths */
     if (likes.length > 0) {
       return likes.find((like) => like === userId)
         ? (
@@ -49,7 +49,7 @@ const Post = ({ post, setCurrentId }) => {
   };
 
   const openPost = (e) => {
-    // dispatch(getPost(post._id, history));
+    /*dispatch(getPost(post._id, history));*/
 
     history.push(`/posts/${post._id}`);
   };

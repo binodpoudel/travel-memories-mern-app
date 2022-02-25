@@ -1,9 +1,9 @@
-import { START_LOADING, END_LOADING, FETCH_ALL, FETCH_POST, FETCH_BY_SEARCH, CREATE, UPDATE, DELETE, LIKE, COMMENT } from '../constants/actionTypes'; // Why I use constants is because if we miss a typing  or typo error we easily find.
-import * as api from '../api/index.js'; /// Api connection from frontend to backend this ways.. .....
+import { START_LOADING, END_LOADING, FETCH_ALL, FETCH_POST, FETCH_BY_SEARCH, CREATE, UPDATE, DELETE, LIKE, COMMENT } from '../constants/actionTypes'; /* Why I use constants is because if we miss a typing  or typo error we easily find.*/
+import * as api from '../api/index.js'; /* Api connection from frontend to backend this ways.. .....*/
 
-// Below code  logic for getPost.
-/// I do logic in Posts Reducers for STAR_LOADING and END_LOADING AND I USE HERE.
-//logic i use postDetails.jsx there.
+/* Below code  logic for getPost.*/
+/* I do logic in Posts Reducers for STAR_LOADING and END_LOADING AND I USE HERE.*/
+/*logic i use postDetails.jsx there.*/
 
 export const getPost = (id) => async (dispatch) => {
   try {
@@ -17,8 +17,8 @@ export const getPost = (id) => async (dispatch) => {
   }
 };
 
-// Below code  logic for getPosts.
-// we pass here page as a parmeter because when we post somethings and fetch anykind post page this we use pagination.jsx page.
+/* Below code  logic for getPosts.*/
+/* we pass here page as a parmeter because when we post somethings and fetch anykind post page this we use pagination.jsx page.*/
 
 export const getPosts = (page) => async (dispatch) => {
   try {
@@ -32,12 +32,12 @@ export const getPosts = (page) => async (dispatch) => {
   }
 };
 
-// Below code  logic for getPostsBySearch.
-// The code below is getPostbysearch. I created this and I use here redux thunk for asynchronity action logic and we use home.js and dispatch.
+/* Below code  logic for getPostsBySearch.*/
+/* The code below is getPostbysearch. I created this and I use here redux thunk for asynchronity action logic and we use home.js and dispatch.*/
 export const getPostsBySearch = (searchQuery) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
-    const { data: { data } } = await api.fetchPostsBySearch(searchQuery); // this mean communication to backend and i create in api index.js.
+    const { data: { data } } = await api.fetchPostsBySearch(searchQuery); /* this mean communication to backend and i create in api index.js.*/
 
     dispatch({ type: FETCH_BY_SEARCH, payload: { data } });
     dispatch({ type: END_LOADING });
@@ -46,7 +46,7 @@ export const getPostsBySearch = (searchQuery) => async (dispatch) => {
   }
 };
 
-/// Below code logic for  create new post.
+/* Below code logic for  create new post.*/
 export const createPost = (post, history) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
@@ -60,7 +60,7 @@ export const createPost = (post, history) => async (dispatch) => {
   }
 };
 
-/// Below code logic for updatePost.
+/* Below code logic for updatePost.*/
 
 export const updatePost = (id, post) => async (dispatch) => {
   try {
@@ -72,8 +72,8 @@ export const updatePost = (id, post) => async (dispatch) => {
   }
 };
 
-/// Below code logic for likePost.
-/// Like Post, we don't need to use dispatch start_loading. That is why I am not using it here.
+/* Below code logic for likePost.*/
+/* Like Post, we don't need to use dispatch start_loading. That is why I am not using it here.*/
 
 export const likePost = (id) => async (dispatch) => {
   const user = JSON.parse(localStorage.getItem('profile'));
@@ -87,21 +87,21 @@ export const likePost = (id) => async (dispatch) => {
   }
 };
 
-//// Below code  logic for commentPost.
-///Below code value means finalComment and  id, means post._id ( we are passing in the commentSection file inside handleClick dispatch).
+/* Below code  logic for commentPost.*/
+/* Below code value means finalComment and  id, means post._id ( we are passing in the commentSection file inside handleClick dispatch).*/
 export const commentPost = (value, id) => async (dispatch) => {
   
   try {
-    const  { data }  = await api.comment(value, id); /// here action creater api called
+    const  { data }  = await api.comment(value, id); /* here action creater api called*/
     console.log(data)
-    dispatch({ type: COMMENT, payload: data }); //This code deals with redux thunk and send our comment commentSections.js  and fetch all.
-    return data.comments;  // return new comment
+    dispatch({ type: COMMENT, payload: data }); /*This code deals with redux thunk and send our comment commentSections.js  and fetch all.*/
+    return data.comments;  /* return new comment*/
   } catch (error) {
     console.log(error);
   }
 };
 
-/// Below code logic for deletePost.
+/* Below code logic for deletePost.*/
 
 export const deletePost = (id) => async (dispatch) => {
   try {

@@ -10,6 +10,7 @@ import memoriesText from '../../images/TravelText.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './styles';
 
+/* Navbar components */
 const Navbar = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const dispatch = useDispatch();

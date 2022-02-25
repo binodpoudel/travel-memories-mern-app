@@ -8,6 +8,7 @@ import ChipInput from 'material-ui-chip-input';
 import { createPost, updatePost } from '../../actions/posts';
 import useStyles from './styles';
 
+/* Form details */
 const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({ title: '', message: '', tags: [], selectedFile: '' });
   const post = useSelector((state) => (currentId ? state.posts.posts.find((message) => message._id === currentId) : null));
@@ -42,7 +43,7 @@ const Form = ({ currentId, setCurrentId }) => {
     return (
       <Paper className={classes.paper} elevation={6}>
         <Typography variant="h6" align="center">
-          Please Sign In to create your own travel memories, and like other's memories.
+          Please Sign In to create your own travel memories, and like other's posts.
         </Typography>
       </Paper>
     );

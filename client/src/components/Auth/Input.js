@@ -3,7 +3,7 @@ import { TextField, Grid, InputAdornment, IconButton } from '@material-ui/core';
 
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
-
+/* Input details */
 const Input = ({ name, handleChange, label, half, autoFocus, type, handleShowPassword }) => (
   <Grid item xs={12} sm={half ? 6 : 12}>
     <TextField
@@ -29,3 +29,4 @@ const Input = ({ name, handleChange, label, half, autoFocus, type, handleShowPas
 );
 
 export default Input;
+/* I used this Input in Auth.js */

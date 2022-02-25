@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Paper, Typography, CircularProgress, Divider } from '@material-ui/core/';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,7 +8,7 @@ import CommentSection from './CommentSection';
 
 import { getPost, getPostsBySearch } from '../../actions/posts';
 import useStyles from './styles';
-
+/* logic for post details  */
 const Post = () => {
   const { post, posts, isLoading } = useSelector((state) => state.posts);
   const dispatch = useDispatch();
@@ -55,7 +56,6 @@ const Post = () => {
 
           <Typography variant="body1"><strong>Travel Memories chat coming soon!</strong></Typography>
           <Divider style={{ margin: '20px 0' }} />
-          {/*<Typography variant="body1"><strong>Comments - coming soon!</strong></Typography> */}
           <Divider style={{ margin: '20px 0' }} />
         </div>
         <div className={classes.imageSection}>

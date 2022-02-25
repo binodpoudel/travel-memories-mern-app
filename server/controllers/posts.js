@@ -5,13 +5,13 @@ import PostMessage from '../models/postMessage.js';
 
 const router = express.Router();
 
-// below code  i use all logic and passing data from frontend and connection backend via through in routes folder.
+/* below code  i use all logic and passing data from frontend and connection backend via through in routes folder. */
 export const getPosts = async (req, res) => {
     const { page } = req.query; // here we passing data from frontend
     
     try {
         const LIMIT = 8;
-        const startIndex = (Number(page) - 1) * LIMIT; // get the starting index of every page
+        const startIndex = (Number(page) - 1) * LIMIT; /* get the starting index of every page */
     
         const total = await PostMessage.countDocuments({});
         const posts = await PostMessage.find().sort({ _id: -1 }).limit(LIMIT).skip(startIndex);
@@ -23,7 +23,7 @@ export const getPosts = async (req, res) => {
 }
 
 export const getPostsBySearch = async (req, res) => {
-    const { searchQuery, tags } = req.query; // we use here query because we search. we pass here searchQuery and tags beacuse we want to that when we search page with name or number
+    const { searchQuery, tags } = req.query; /* we use here query because we search. we pass here searchQuery and tags beacuse we want to that when we search page with name or number*/
 
     try {
         const title = new RegExp(searchQuery, "i");
@@ -109,18 +109,18 @@ export const likePost = async (req, res) => {
 
 export const commentPost = async (req, res) => {
     
-    const { id } = req.params; // we distructure the id come from dynamic fron client side api index.js
-    const { value } = req.body; // here distructure value we passing in api index.js
+    const { id } = req.params; /* we distructure the id come from dynamic fron client side api index.js
+    const { value } = req.body; // here distructure value we passing in api index.js */
 
-    //if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
+    /*if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);*/
     
     const post = await PostMessage.findById(id); 
 
-    post.comments.push(value);  // we push here and below update in datebase
+    post.comments.push(value);  /* we push here and below update in datebase*/
     //console.log(value)
 
-    const updatedPost = await PostMessage.findByIdAndUpdate(id, post, { new: true }); /// then we update database new post
-    res.json(updatedPost); /// we backe in frontend
+    const updatedPost = await PostMessage.findByIdAndUpdate(id, post, { new: true }); /* then we update database new post*/
+    res.json(updatedPost); /* we back in frontend */
     
 };
 

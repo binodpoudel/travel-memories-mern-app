@@ -1,6 +1,6 @@
-import { FETCH_ALL, FETCH_BY_SEARCH, FETCH_POST, CREATE, UPDATE, DELETE, LIKE, COMMENT } from '../constants/actionTypes'; // Why I use constants is because if we miss a typing  or typo error we easily find.
+import { FETCH_ALL, FETCH_BY_SEARCH, FETCH_POST, CREATE, UPDATE, DELETE, LIKE, COMMENT } from '../constants/actionTypes'; /* Why I use constants is because if we miss a typing  or typo error we easily find.*/
 
-/// Little explain what does below code means..  A reducer is a function which takes two arguments - current state and an action. that determines changes to an application's state.It uses the actions it receives to determine this change. Redux help manage an application's state changes in a single store so that they behave consistenly.
+/* Little explain what does below code means..  A reducer is a function which takes two arguments - current state and an action. that determines changes to an application's state.It uses the actions it receives to determine this change. Redux help manage an application's state changes in a single store so that they behave consistenly.*/
 
 export default (state = { isLoading: true, posts: [] }, action) => {
   switch (action.type) {
@@ -25,11 +25,11 @@ export default (state = { isLoading: true, posts: [] }, action) => {
       case COMMENT: 
       return { ...state, 
                posts: state.posts.map((post) =>  { 
-           // change the post that just received a comment ....
+           /* change the post that just received a comment ....*/
                 if(post._id === action.payload._id) {
                   return action.payload; 
                 }
-                return post; // return all the other posts normally...
+                return post; /* return all the other posts normally...*/
         }),
       };  
 

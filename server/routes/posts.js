@@ -2,7 +2,7 @@ import express from 'express';
 
 import { getPosts, getPostsBySearch, getPost, createPost, updatePost, likePost, deletePost, commentPost} from '../controllers/posts.js';
 
-// I do all of backend function handel and creation all logic in controller and use here connection.
+/* I do all of backend function handel and creation all logic in controller and use here connection.*/
 const router = express.Router();
 import auth from "../middleware/auth.js";
 
@@ -18,4 +18,4 @@ router.post('/:id/commentPost', auth, commentPost);
 
 export default router;
 
-/////this here  code functions of backend and handele all likePost , commentPost .........
+/*this here  code functions of backend and handele all likePost , commentPost .........*/
