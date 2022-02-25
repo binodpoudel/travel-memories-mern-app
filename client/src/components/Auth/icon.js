@@ -10,4 +10,4 @@ const icon = () => (
 );
 
 export default icon;
-/* Used in Auth.js */
+/*I used in Auth.js */

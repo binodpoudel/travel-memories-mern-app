@@ -1,6 +1,6 @@
 import * as actionType from '../constants/actionTypes';
 
-/* Here logic for user Login and  Logout*/
+/* Here logic for user Login and Logout.*/
 const authReducer = (state = { authData: null }, action) => {
   switch (action.type) {
     case actionType.AUTH:

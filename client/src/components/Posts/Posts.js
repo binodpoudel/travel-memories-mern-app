@@ -6,11 +6,11 @@ import Post from './Post/Post';
 import useStyles from './styles';
 
 const Posts = ({ setCurrentId }) => {
-  const { posts, isLoading } = useSelector((state) => state.posts);/*Before we had arrya [] of posts, now we have an object where we have property inside there { posts: []} because we changed here, we have an isLodding proproty number of page so on.....*/
+  const { posts, isLoading } = useSelector((state) => state.posts);/*Before we had arrya [] of posts, now we have an object where we have property inside there { posts: []} because we changed here, we have an isLodding proproty number of page so on....*/
 
   const classes = useStyles();
 
-  if (!posts.length && !isLoading) return 'No posts'; /* This means if we don't have any posts and we are not currently loading, that means we can't load them.*/
+  if (!posts.length && !isLoading) return 'No posts'; /* This means if we don't have any posts and we are not currently loading, that means we can't load them. */
 
   return (
     

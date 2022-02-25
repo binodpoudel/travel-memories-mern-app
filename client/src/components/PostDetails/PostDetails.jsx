@@ -8,7 +8,7 @@ import CommentSection from './CommentSection';
 
 import { getPost, getPostsBySearch } from '../../actions/posts';
 import useStyles from './styles';
-/* logic for post details  */
+/* Logic for postdetails. */
 const Post = () => {
   const { post, posts, isLoading } = useSelector((state) => state.posts);
   const dispatch = useDispatch();

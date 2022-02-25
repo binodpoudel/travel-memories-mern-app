@@ -8,7 +8,7 @@ import ChipInput from 'material-ui-chip-input';
 import { createPost, updatePost } from '../../actions/posts';
 import useStyles from './styles';
 
-/* Form details */
+/* Form details. */
 const Form = ({ currentId, setCurrentId }) => {
   const [postData, setPostData] = useState({ title: '', message: '', tags: [], selectedFile: '' });
   const post = useSelector((state) => (currentId ? state.posts.posts.find((message) => message._id === currentId) : null));

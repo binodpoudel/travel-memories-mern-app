@@ -1,4 +1,4 @@
-/* API connection here.*/
+/*API connection here */
 
 import axios from 'axios';
 

@@ -32,10 +32,10 @@ const Post = ({ post, setCurrentId }) => {
     } else {
       setLikes([ ...post.likes, userId])
     }
-  }; /* this we use below where is like button and now we get immedetly when we like in like button.*/ 
+  }; /* This we use below where is like button and now we get immedetly when we like in like button.*/ 
 
   const Likes = () => {
-    /* here  post likes lengths */
+    /* Here  post likes length.*/
     if (likes.length > 0) {
       return likes.find((like) => like === userId)
         ? (

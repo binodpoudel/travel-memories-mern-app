@@ -29,4 +29,4 @@ const Input = ({ name, handleChange, label, half, autoFocus, type, handleShowPas
 );
 
 export default Input;
-/* I used this Input in Auth.js */
+/* I used this Input components in Auth.js */
