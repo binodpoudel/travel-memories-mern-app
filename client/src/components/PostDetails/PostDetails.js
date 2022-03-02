@@ -1,10 +1,10 @@
-
+/* This is PostDetails components */
 import React, { useEffect } from 'react';
 import { Paper, Typography, CircularProgress, Divider } from '@material-ui/core/';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import { useParams, useHistory } from 'react-router-dom';
-import CommentSection from './CommentSection'; 
+import CommentSection from './CommentSection';/* from CommentSections.js */
 
 import { getPost, getPostsBySearch } from '../../actions/posts';
 import useStyles from './styles';

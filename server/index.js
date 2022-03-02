@@ -13,7 +13,7 @@ app.use(express.json({ limit: '30mb', extended: true }))
 app.use(express.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 /* routes*/
-app.use('/posts', postRoutes); 
+app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 /*  Database connection write your userName and Password */
 const CONNECTION_URL = 'mongodb+srv://Your UserName:Password@cluster0.4xze8.mongodb.net/mernstack?retryWrites=true&w=majority';

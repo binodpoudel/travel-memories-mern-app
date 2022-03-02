@@ -90,7 +90,7 @@ export const likePost = (id) => async (dispatch) => {
 /* Below logic for commentPost.*/
 /* Below code value means finalComment and  id, means post._id ( we are passing in the commentSection file inside handleClick dispatch).*/
 export const commentPost = (value, id) => async (dispatch) => {
-  
+
   try {
     const  { data }  = await api.comment(value, id); /* here action creater api called*/
     console.log(data)

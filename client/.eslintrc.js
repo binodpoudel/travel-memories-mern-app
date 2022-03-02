@@ -1,11 +1,20 @@
+
 module.exports = {
   env: {
     browser: true,
     es6: true,
+    node: true,
+    "jest": true,
+    skipWhitespace: false,
   },
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
     'airbnb',
+    'import'
+  ],
+  plugins: [
+    'react-hooks'
   ],
   globals: {
     Atomics: 'readonly',
@@ -24,6 +33,11 @@ module.exports = {
   ],
   rules: {
     'import/extensions': 0,
+    semi: 2,
+
+
+    'ignoreComments': true,
+    'skipComments': false,
     'react/prop-types': 0,
     'linebreak-style': 0,
     'react/state-in-constructor': 0,

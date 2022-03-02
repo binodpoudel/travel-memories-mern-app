@@ -47,9 +47,6 @@ export default makeStyles((theme) => ({
     marginRight: '30px',
   },
 
-  
+
 }));
 
-  
-// marginLeft: 0,
-//display: 'flex'

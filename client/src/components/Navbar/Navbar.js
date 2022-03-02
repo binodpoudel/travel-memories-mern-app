@@ -56,7 +56,7 @@ const Navbar = () => {
           <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
         )}
          <div className={classes.github}>
-          <a href={url} target="_blank"><GitHub /></a> 
+          <a href={url} target="_blank" rel="noopener noreferrer"><GitHub /></a> 
         </div>  
       </Toolbar>
     </AppBar>
