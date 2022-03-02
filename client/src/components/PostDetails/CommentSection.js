@@ -1,4 +1,4 @@
-/*logic for commentSection  */
+/*This is logic for commentSection*/
 import React, { useState, useRef } from 'react';
 import { Typography, TextField, Button } from '@material-ui/core/';
 import { useDispatch } from 'react-redux';
