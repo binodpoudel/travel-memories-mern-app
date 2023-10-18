@@ -27,5 +27,5 @@
  /*"In this project, the used photos are not mine, all these photos are taken from Google."*/
 
 
-website:- https://travelmemories-mern-app.netlify.app/posts
+website:- https://fullstack-travel-app.netlify.app/posts
  //// web site
